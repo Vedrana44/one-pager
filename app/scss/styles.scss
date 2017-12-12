@@ -1,0 +1,28 @@
+//COLORS
+$base-text: #FFFFFF;
+$button-text: #000000;
+
+//BASICS
+body{
+    margin: 0;
+    color: $base-text;
+}
+
+//TYPOGRAPHY
+h1{
+    font-size: 72px;
+}
+h2{
+    font-size: 64px;
+}
+
+//BUTTONS
+.btn-cta{
+    background-color: #FFEC27;
+    color: $button-text;
+}
+
+//INPUT & TEXTAREA
+input, textarea{
+    border: 2px solid #A6A6A6;
+}
