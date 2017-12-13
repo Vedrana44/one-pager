@@ -1,16 +1,114 @@
 body {
   margin: 0;
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  font-family: 'Lato', sans-serif; }
+
+p {
+  margin: 0 0 10px 0; }
 
 h1 {
-  font-size: 72px; }
+  font-size: 72px;
+  margin: 0; }
 
 h2 {
-  font-size: 64px; }
+  font-size: 64px;
+  margin: 0;
+  text-align: center; }
 
-.btn-cta {
+button {
   background-color: #FFEC27;
-  color: #000000; }
+  color: #000000;
+  font-size: 20px;
+  text-transform: uppercase;
+  border: none;
+  padding: 20px;
+  cursor: pointer; }
 
 input, textarea {
-  border: 2px solid #A6A6A6; }
+  border: 2px solid #A6A6A6;
+  font-family: 'Lato', sans-serif; }
+
+header {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
+  padding: 30px 25px;
+  box-sizing: border-box; }
+  header img {
+    vertical-align: middle; }
+
+.banner {
+  background-image: url("/images/backgrounds/banner-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 0;
+  padding: 120px 25px 78px;
+  text-align: center; }
+  .banner h1 {
+    margin-bottom: 30px; }
+    .banner h1 img {
+      vertical-align: middle;
+      margin-left: 20px;
+      margin-right: 20px; }
+  .banner .banner-desc {
+    max-width: 588px;
+    margin: 20px auto 40px;
+    font-size: 18px; }
+
+.developers {
+  background-image: url("/images/backgrounds/dev-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 0;
+  padding: 50px 25px; }
+  .developers .dev-content {
+    max-width: 1170px;
+    margin: 0 auto; }
+    .developers .dev-content .dev-list .developer {
+      overflow: auto;
+      display: inline-block;
+      width: 49.7%;
+      margin-bottom: 50px; }
+      .developers .dev-content .dev-list .developer .dev-img {
+        float: left;
+        margin-right: 15px; }
+      .developers .dev-content .dev-list .developer .dev-data {
+        width: 100%; }
+
+.contact-form {
+  background-image: url("/images/backgrounds/form-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 0;
+  padding: 30px 25px 86px; }
+  .contact-form form {
+    max-width: 502px;
+    margin: 0 auto; }
+    .contact-form form input, .contact-form form textarea {
+      width: 100%;
+      margin-bottom: 30px;
+      font-size: 16px;
+      padding: 25px;
+      box-sizing: border-box; }
+    .contact-form form textarea::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: #878787;
+      text-align: center; }
+    .contact-form form textarea:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: #878787;
+      text-align: center; }
+    .contact-form form textarea::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: #878787;
+      text-align: center; }
+    .contact-form form button {
+      width: 100%; }
+
+footer {
+  padding: 30px 25px;
+  background-color: red;
+  text-align: center; }
+  footer .copyright {
+    font-size: 12px; }
