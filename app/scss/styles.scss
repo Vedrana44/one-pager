@@ -22,10 +22,13 @@ ul{
 h1{
     font-size: 72px;
     margin: 0;
+    @media (max-width: 767px){
+        font-size: 62px;
+    }
 }
 h2{
     font-size: 64px;
-    margin: 0;
+    margin: 20px 0 40px;
     text-align: center;
 }
 p{
@@ -43,8 +46,8 @@ p{
     font-weight: 600;
     text-transform: uppercase;
     border: none;
-    padding-top: 18px;
-    padding-bottom: 18px;
+    padding-top: 17px;
+    padding-bottom: 17px;
     cursor: pointer;
     text-align: center;
     display: block;
@@ -67,23 +70,41 @@ input, textarea{
     text-align: center;
     header{
         padding: 24px 0;
+        text-align: center;
         .header-logo{
-            text-align: center;
-            font-size: 50px;
-            box-sizing: border-box;
-            img{
-                vertical-align: middle;
-                margin: 0 2px;
+            > div{
+                display: inline-block;
+                @media (max-width: 767px){
+                    display: block;
+                }
+            }
+            .js-logo{
+                margin: 0px 11px 0 14px;
+                vertical-align: bottom;
+                @media (max-width: 767px){
+                    margin-top: 17px;
+                }
+            }
+            .title{
+                font-size: 50px;
             }
         }
     }
     .hero{
         padding: 60px 0 50px;
+        @media (max-width: 767px){
+            padding: 0 0 50px;
+        }
         h1{
             margin: 64px 0 30px;
             img{
                 vertical-align: middle;
                 margin: 0 22px;
+                @media (max-width: 767px){
+                    width: 70px;
+                    margin: auto;
+                    display: block;
+                }
             }
         }
         .banner-desc{
@@ -105,18 +126,22 @@ input, textarea{
 nav{
     background-color: #000000;
     z-index: 1;
+    height: 82px;
     ul{
         max-width: 1145px;
         margin: 0 auto;
         padding: 18px 25px;
         display: flex;
         justify-content: space-between;
-        li{
+        a{
+            font-size: 36px;
+        }
+    }
+    @media (max-width: 767px){
+        ul{
+            padding: 27px 25px;
             a{
-                font-size: 36px; 
-                @media (max-width: 767px){
-                    font-size: 22px; 
-                }
+                font-size: 22px; 
             }
         }
     }
@@ -128,83 +153,52 @@ nav{
 }
 .nav-placeholder{
     height: 82px;
-    // @media (max-width: 767px){
-    //     height: 64px;
-    // }
 }
-
-//DEVELOPERS
-/* #developers{
-    background-image: url("/images/backgrounds/dev-bg.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center 0;
-    padding: 48px 25px;
-    .dev-content{
-        max-width: 1170px;
-        margin: 0 auto;
-        h2{
-            margin-bottom: 31px;
-        }
-        .dev-list{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            .developer{
-                overflow: auto;
-                width: 50%;
-                margin-bottom: 50px;
-                max-width: 550px;
-                .dev-img{
-                    float: left;
-                    margin-right: 15px;
-                    height: 100%;
-                }
-                .dev-data{
-                    width: 100%;
-                    .dev-name{
-                        font-size: 18px;
-                        font-weight: 800;
-                    }
-                }
-            }
-        }
-    }
-} */
 
 #developers{
     background-image: url("/images/backgrounds/dev-bg.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center 0;
-    padding: 48px 25px;
+    padding: 25px;
     .dev-content{
         max-width: 1170px;
         margin: 0 auto;
-        h2{
-            margin-bottom: 31px;
-        }
         .dev-list{
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            margin-top: 50px;
+            margin-bottom: 20px;
             .developer{
                 width: 50%;
-                @media (max-width: 767px) {
-                    width: 100%;
-                }
-                margin-bottom: 50px;
+                margin-bottom: 46px;
                 .dev-inner{
                     display: flex;
                     max-width: 570px;
-                    @media (max-width: 767px){
-                        max-width: initial;
+                    .dev-img{
+                        img{
+                            border-radius: 50px; 
+                        }
                     }
                     .dev-data{
                         margin: 0 20px;
                         .dev-name{
                             font-size: 18px;
                             font-weight: 800;
+                        }
+                    }
+                }
+                @media (max-width: 767px) {
+                    width: 100%;
+                    .dev-inner{
+                        .dev-img{
+                            img{
+                                width: 80px;
+                            }
+                        } 
+                        .dev-data{
+                            margin-right: 0;
                         }
                     }
                 }
@@ -219,12 +213,12 @@ nav{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center 0;
-    padding: 30px 25px 86px;
+    padding: 30px 25px 88px;
     .contact-form{
         max-width: 502px;
         margin: 0 auto;
         h2{
-            margin: 35px 0 62px;
+            margin-top: 32px;
             position: relative;
             span{
                 &::before, &::after{
@@ -233,8 +227,10 @@ nav{
                     width: 116px;
                     height: 116px;
                     background: url("/images/decorations/sace.svg") no-repeat;
-                    top: 0;
-                    bottom: 0;
+                    top: -10px;
+                    @media(max-width: 767px) {
+                        opacity: 0.2;
+                    }
                 }
                 &::before{
                     left: 0;
@@ -245,27 +241,28 @@ nav{
             }
         }
         form{
+            margin-top: 60px;
             input, textarea{
                 width: 100%;
-                margin-bottom: 26px;
+                margin-bottom: 28px;
                 font-size: 16px;
-                padding: 20px;
+                padding: 19px;
                 box-sizing: border-box;
+                &::placeholder {
+                    color: #878787;
+                    text-align: center;
+                }
+                // &:-ms-input-placeholder {
+                //     color: #878787;
+                //     text-align: center;
+                // }
+                // &::-ms-input-placeholder {
+                //     color: #878787;
+                //     text-align: center;
+                // }
             }
             textarea{
                 min-height: 202px;
-                &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-                    color: #878787;
-                    text-align: center;
-                }
-                &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-                    color: #878787;
-                    text-align: center;
-                }
-                &::-ms-input-placeholder { /* Microsoft Edge */
-                    color: #878787;
-                    text-align: center;
-                }
             }
             .button{
                 width: 100%

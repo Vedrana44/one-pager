@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width">
 </head>
 
 <body>
@@ -14,9 +15,13 @@
     <div class="main-hero" id="hero">
         <header>
             <div class="header-logo">
-                <img src="images/logos/web-burza-small-logo.png" alt="web.burza logo">
-                <img src="images/logos/js-sm-logo.png" alt="Js logo">
-                <span>school</span>
+                <div class="web-burza-logo">
+                    <img src="images/logos/web-burza-small-logo.png" alt="web.burza logo">                        
+                </div>
+                <div class="js-logo">
+                    <img src="images/logos/js-sm-logo.png" alt="Js logo">                        
+                </div>
+                <div class="title">school</div>
             </div>
         </header>
         <div class="hero">
@@ -120,10 +125,10 @@
                 <span>join us</span>
             </h2>
             <form>
-                <input type="text">
-                <input type="email">
+                <input type="text" placeholder="Write your name" required>
+                <input type="email" placeholder="What's your email">
                 <textarea placeholder="Write something nice about us..."></textarea> 
-                <a class="button">Join us!</a>           
+                <a class="button" type="submit">Join us!</a>           
             </form>
         </div>
     </div>

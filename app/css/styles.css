@@ -15,10 +15,13 @@ ul {
 h1 {
   font-size: 72px;
   margin: 0; }
+  @media (max-width: 767px) {
+    h1 {
+      font-size: 62px; } }
 
 h2 {
   font-size: 64px;
-  margin: 0;
+  margin: 20px 0 40px;
   text-align: center; }
 
 p {
@@ -34,8 +37,8 @@ p {
   font-weight: 600;
   text-transform: uppercase;
   border: none;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-top: 17px;
+  padding-bottom: 17px;
   cursor: pointer;
   text-align: center;
   display: block;
@@ -53,21 +56,36 @@ input, textarea {
   padding: 25px;
   text-align: center; }
   .main-hero header {
-    padding: 24px 0; }
-    .main-hero header .header-logo {
-      text-align: center;
-      font-size: 50px;
-      box-sizing: border-box; }
-      .main-hero header .header-logo img {
-        vertical-align: middle;
-        margin: 0 2px; }
+    padding: 24px 0;
+    text-align: center; }
+    .main-hero header .header-logo > div {
+      display: inline-block; }
+      @media (max-width: 767px) {
+        .main-hero header .header-logo > div {
+          display: block; } }
+    .main-hero header .header-logo .js-logo {
+      margin: 0px 11px 0 14px;
+      vertical-align: bottom; }
+      @media (max-width: 767px) {
+        .main-hero header .header-logo .js-logo {
+          margin-top: 17px; } }
+    .main-hero header .header-logo .title {
+      font-size: 50px; }
   .main-hero .hero {
     padding: 60px 0 50px; }
+    @media (max-width: 767px) {
+      .main-hero .hero {
+        padding: 0 0 50px; } }
     .main-hero .hero h1 {
       margin: 64px 0 30px; }
       .main-hero .hero h1 img {
         vertical-align: middle;
         margin: 0 22px; }
+        @media (max-width: 767px) {
+          .main-hero .hero h1 img {
+            width: 70px;
+            margin: auto;
+            display: block; } }
     .main-hero .hero .banner-desc {
       max-width: 588px;
       margin: 60px auto 42px;
@@ -81,18 +99,21 @@ input, textarea {
 
 nav {
   background-color: #000000;
-  z-index: 1; }
+  z-index: 1;
+  height: 82px; }
   nav ul {
     max-width: 1145px;
     margin: 0 auto;
     padding: 18px 25px;
     display: flex;
     justify-content: space-between; }
-    nav ul li a {
+    nav ul a {
       font-size: 36px; }
-      @media (max-width: 767px) {
-        nav ul li a {
-          font-size: 22px; } }
+  @media (max-width: 767px) {
+    nav ul {
+      padding: 27px 25px; }
+      nav ul a {
+        font-size: 22px; } }
 
 .sticky {
   position: fixed;
@@ -102,87 +123,53 @@ nav {
 .nav-placeholder {
   height: 82px; }
 
-/* #developers{
-    background-image: url("/images/backgrounds/dev-bg.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center 0;
-    padding: 48px 25px;
-    .dev-content{
-        max-width: 1170px;
-        margin: 0 auto;
-        h2{
-            margin-bottom: 31px;
-        }
-        .dev-list{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            .developer{
-                overflow: auto;
-                width: 50%;
-                margin-bottom: 50px;
-                max-width: 550px;
-                .dev-img{
-                    float: left;
-                    margin-right: 15px;
-                    height: 100%;
-                }
-                .dev-data{
-                    width: 100%;
-                    .dev-name{
-                        font-size: 18px;
-                        font-weight: 800;
-                    }
-                }
-            }
-        }
-    }
-} */
 #developers {
   background-image: url("/images/backgrounds/dev-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center 0;
-  padding: 48px 25px; }
+  padding: 25px; }
   #developers .dev-content {
     max-width: 1170px;
     margin: 0 auto; }
-    #developers .dev-content h2 {
-      margin-bottom: 31px; }
     #developers .dev-content .dev-list {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between; }
+      justify-content: space-between;
+      margin-top: 50px;
+      margin-bottom: 20px; }
       #developers .dev-content .dev-list .developer {
         width: 50%;
-        margin-bottom: 50px; }
-        @media (max-width: 767px) {
-          #developers .dev-content .dev-list .developer {
-            width: 100%; } }
+        margin-bottom: 46px; }
         #developers .dev-content .dev-list .developer .dev-inner {
           display: flex;
           max-width: 570px; }
-          @media (max-width: 767px) {
-            #developers .dev-content .dev-list .developer .dev-inner {
-              max-width: initial; } }
+          #developers .dev-content .dev-list .developer .dev-inner .dev-img img {
+            border-radius: 50px; }
           #developers .dev-content .dev-list .developer .dev-inner .dev-data {
             margin: 0 20px; }
             #developers .dev-content .dev-list .developer .dev-inner .dev-data .dev-name {
               font-size: 18px;
               font-weight: 800; }
+        @media (max-width: 767px) {
+          #developers .dev-content .dev-list .developer {
+            width: 100%; }
+            #developers .dev-content .dev-list .developer .dev-inner .dev-img img {
+              width: 80px; }
+            #developers .dev-content .dev-list .developer .dev-inner .dev-data {
+              margin-right: 0; } }
 
 #join {
   background-image: url("/images/backgrounds/form-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center 0;
-  padding: 30px 25px 86px; }
+  padding: 30px 25px 88px; }
   #join .contact-form {
     max-width: 502px;
     margin: 0 auto; }
     #join .contact-form h2 {
-      margin: 35px 0 62px;
+      margin-top: 32px;
       position: relative; }
       #join .contact-form h2 span::before, #join .contact-form h2 span::after {
         position: absolute;
@@ -190,34 +177,29 @@ nav {
         width: 116px;
         height: 116px;
         background: url("/images/decorations/sace.svg") no-repeat;
-        top: 0;
-        bottom: 0; }
+        top: -10px; }
+        @media (max-width: 767px) {
+          #join .contact-form h2 span::before, #join .contact-form h2 span::after {
+            opacity: 0.2; } }
       #join .contact-form h2 span::before {
         left: 0; }
       #join .contact-form h2 span::after {
         right: 0; }
-    #join .contact-form form input, #join .contact-form form textarea {
-      width: 100%;
-      margin-bottom: 26px;
-      font-size: 16px;
-      padding: 20px;
-      box-sizing: border-box; }
-    #join .contact-form form textarea {
-      min-height: 202px; }
-      #join .contact-form form textarea::placeholder {
-        /* Chrome, Firefox, Opera, Safari 10.1+ */
-        color: #878787;
-        text-align: center; }
-      #join .contact-form form textarea:-ms-input-placeholder {
-        /* Internet Explorer 10-11 */
-        color: #878787;
-        text-align: center; }
-      #join .contact-form form textarea::-ms-input-placeholder {
-        /* Microsoft Edge */
-        color: #878787;
-        text-align: center; }
-    #join .contact-form form .button {
-      width: 100%; }
+    #join .contact-form form {
+      margin-top: 60px; }
+      #join .contact-form form input, #join .contact-form form textarea {
+        width: 100%;
+        margin-bottom: 28px;
+        font-size: 16px;
+        padding: 19px;
+        box-sizing: border-box; }
+        #join .contact-form form input::placeholder, #join .contact-form form textarea::placeholder {
+          color: #878787;
+          text-align: center; }
+      #join .contact-form form textarea {
+        min-height: 202px; }
+      #join .contact-form form .button {
+        width: 100%; }
 
 footer {
   padding: 30px 25px;
