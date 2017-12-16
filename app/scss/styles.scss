@@ -1,12 +1,13 @@
 //COLORS
 $base-text: #FFFFFF;
 $button-text: #000000;
+$button-color: #FFEC27;
 
 //BASICS
 body{
     margin: 0;
     color: $base-text;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 a{
     color: $base-text;
@@ -22,25 +23,26 @@ ul{
 h1{
     font-size: 72px;
     margin: 0;
+    font-weight: 400;
     @media (max-width: 767px){
         font-size: 62px;
     }
 }
 h2{
     font-size: 64px;
-    margin: 20px 0 40px;
+    margin: 0;
     text-align: center;
+    @media (max-width: 767px){
+        font-size: 52px;
+    }
 }
 p{
     margin: 0 0 10px 0;
 }
-*{
-    line-height: 1.3;
-}
 
 //BUTTONS
 .button{
-    background-color: #FFEC27;
+    background-color: $button-color;
     color: $button-text;
     font-size: 20px;
     font-weight: 600;
@@ -57,26 +59,22 @@ p{
 //INPUT & TEXTAREA
 input, textarea{
     border: 2px solid #A6A6A6;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 //HEADER & HERO
 .main-hero{
-    background-image: url("/images/backgrounds/banner-bg.png");
+    background-image: url("../images/backgrounds/banner-bg.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center 0;
     padding: 25px;
     text-align: center;
     header{
-        padding: 24px 0;
-        text-align: center;
+        padding: 25px 0;
         .header-logo{
             > div{
                 display: inline-block;
-                @media (max-width: 767px){
-                    display: block;
-                }
             }
             .js-logo{
                 margin: 0px 11px 0 14px;
@@ -87,29 +85,49 @@ input, textarea{
             }
             .title{
                 font-size: 50px;
+                font-weight: 200;
+            }
+            @media (max-width: 767px){
+                .web-burza-logo{
+                    img{
+                        width: 106px;
+                    }
+                }
+                .js-logo{
+                    margin: 0 5px;
+                    vertical-align: middle;
+                    img{
+                        width: 26px;
+                    }
+                }
+                .title{
+                    font-size: 25px;
+                }
             }
         }
     }
     .hero{
-        padding: 60px 0 50px;
+        padding: 100px 0 53px;
         @media (max-width: 767px){
-            padding: 0 0 50px;
+            padding: 44px 0 50px;
         }
         h1{
-            margin: 64px 0 30px;
             img{
                 vertical-align: middle;
-                margin: 0 22px;
+                margin: 0 14px;
+                position: relative;
+                bottom: 8px;
                 @media (max-width: 767px){
                     width: 70px;
-                    margin: auto;
+                    margin: 6px auto;
                     display: block;
+                    position: inherit;
                 }
             }
         }
-        .banner-desc{
+        .intro-text{
             max-width: 588px;
-            margin: 60px auto 42px;
+            margin: 56px auto 46px;
             font-size: 18px;
         }
         .button{
@@ -126,11 +144,10 @@ input, textarea{
 nav{
     background-color: #000000;
     z-index: 1;
-    height: 82px;
     ul{
-        max-width: 1145px;
+        max-width: 1224px;
         margin: 0 auto;
-        padding: 18px 25px;
+        padding: 15px 25px 18px;
         display: flex;
         justify-content: space-between;
         a{
@@ -156,14 +173,14 @@ nav{
 }
 
 #developers{
-    background-image: url("/images/backgrounds/dev-bg.png");
+    background-image: url("../images/backgrounds/dev-bg.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center 0;
     padding: 25px;
     .dev-content{
-        max-width: 1170px;
-        margin: 0 auto;
+        max-width: 1200px;
+        margin: 16px auto 0;
         .dev-list{
             display: flex;
             flex-wrap: wrap;
@@ -172,10 +189,9 @@ nav{
             margin-bottom: 20px;
             .developer{
                 width: 50%;
-                margin-bottom: 46px;
+                margin-bottom: 40px;
                 .dev-inner{
                     display: flex;
-                    max-width: 570px;
                     .dev-img{
                         img{
                             border-radius: 50px; 
@@ -185,20 +201,20 @@ nav{
                         margin: 0 20px;
                         .dev-name{
                             font-size: 18px;
-                            font-weight: 800;
+                            font-weight: 700;
                         }
                     }
                 }
                 @media (max-width: 767px) {
                     width: 100%;
                     .dev-inner{
-                        .dev-img{
-                            img{
-                                width: 80px;
-                            }
-                        } 
-                        .dev-data{
-                            margin-right: 0;
+                        display: block;
+                        .dev-data, .dev-img{
+                            margin: 0;
+                            text-align: center;
+                        }
+                        .dev-name{
+                            margin-top: 10px;
                         }
                     }
                 }
@@ -209,16 +225,15 @@ nav{
 
 //JOIN US
 #join{
-    background-image: url("/images/backgrounds/form-bg.png");
+    background-image: url("../images/backgrounds/form-bg.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center 0;
-    padding: 30px 25px 88px;
+    padding: 25px;
     .contact-form{
         max-width: 502px;
-        margin: 0 auto;
+        margin: 35px auto 63px;
         h2{
-            margin-top: 32px;
             position: relative;
             span{
                 &::before, &::after{
@@ -226,7 +241,7 @@ nav{
                     content: '';
                     width: 116px;
                     height: 116px;
-                    background: url("/images/decorations/sace.svg") no-repeat;
+                    background: url("../images/decorations/sace.svg") no-repeat;
                     top: -10px;
                     @media(max-width: 767px) {
                         opacity: 0.2;
@@ -241,31 +256,30 @@ nav{
             }
         }
         form{
-            margin-top: 60px;
+            margin-top: 57px;
             input, textarea{
                 width: 100%;
                 margin-bottom: 28px;
                 font-size: 16px;
-                padding: 19px;
+                padding: 18px;
                 box-sizing: border-box;
+                display: block;
                 &::placeholder {
                     color: #878787;
                     text-align: center;
                 }
-                // &:-ms-input-placeholder {
-                //     color: #878787;
-                //     text-align: center;
-                // }
-                // &::-ms-input-placeholder {
-                //     color: #878787;
-                //     text-align: center;
-                // }
             }
             textarea{
                 min-height: 202px;
             }
+            textarea::-ms-input-placeholder, input::-ms-input-placeholder{ //Fix for IE
+                text-align: center;
+            }
+            textarea::-moz-placeholder, input::-moz-placeholder{//Fix for Firefox
+                text-align: center;
+            }
             .button{
-                width: 100%
+                width: 100%;
             }
         }
     }
@@ -278,7 +292,13 @@ footer{
     text-align: center;
     .copyright{
         font-size: 12px;
-        margin-top: 18px;
-        margin-bottom: 6px;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+    @media (max-width: 767px) {
+        img{
+            width: 100px;
+        }
     }
 }
+
