@@ -159,7 +159,7 @@ nav {
   top: 0;
   width: 100%; }
 
-.nav-placeholder {
+.nav-container {
   height: 82px; }
 
 #developers {
@@ -247,6 +247,9 @@ nav {
         text-align: center; }
       #join .contact-form form .button {
         width: 100%; }
+    #join .contact-form #feedback {
+      margin-top: 20px;
+      text-align: center; }
 
 footer {
   padding: 30px 25px;

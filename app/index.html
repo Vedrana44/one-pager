@@ -37,7 +37,7 @@
         </div>
     </div>
 
-    <div class="nav-placeholder">
+    <div class="nav-container">
         <nav id="navigation">
             <ul>
                 <li><a href="#hero">about</a></li>
@@ -126,12 +126,13 @@
             <h2>
                 <span>join us</span>
             </h2>
-            <form>
-                <input type="text" id="name" placeholder="Write your name">
-                <input type="email" id="email" placeholder="What's your email">
+            <form id="form">
+                <input type="text" id="name" name="name" placeholder="Write your name">
+                <input type="email" id="email" name="email" placeholder="What's your email">
                 <textarea id="message" placeholder="Write something nice about us..."></textarea> 
-                <a class="button" type="submit" value="submit">Join us!</a>           
+                <a class="button" onclick="submit()">Join us!</a>           
             </form>
+            <div id="feedback"></div>
         </div>
     </div>
 
