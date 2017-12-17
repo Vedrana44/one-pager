@@ -103,21 +103,24 @@ input, textarea {
     @media (max-width: 767px) {
       .main-hero .hero {
         padding: 44px 0 50px; } }
-    .main-hero .hero h1 img {
-      vertical-align: middle;
-      margin: 0 14px;
-      position: relative;
-      bottom: 8px; }
-      @media (max-width: 1024px) {
-        .main-hero .hero h1 img {
-          width: 84px;
-          margin: 0 6px; } }
-      @media (max-width: 767px) {
-        .main-hero .hero h1 img {
-          width: 70px;
-          margin: 6px auto;
-          display: block;
-          position: inherit; } }
+    .main-hero .hero h1 {
+      font-family: Futura, Futura-Medium, "Futura Medium", "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", sans-serif;
+      letter-spacing: 2.3px; }
+      .main-hero .hero h1 img {
+        vertical-align: middle;
+        margin: 0 8px 0 15px;
+        position: relative;
+        bottom: 11px; }
+        @media (max-width: 1024px) {
+          .main-hero .hero h1 img {
+            width: 84px;
+            margin: 0 6px; } }
+        @media (max-width: 767px) {
+          .main-hero .hero h1 img {
+            width: 70px;
+            margin: 6px auto;
+            display: block;
+            position: inherit; } }
     .main-hero .hero .intro-text {
       max-width: 588px;
       margin: 56px auto 46px;

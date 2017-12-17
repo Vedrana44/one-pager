@@ -7,7 +7,7 @@ $button-color: #FFEC27;
 body{
     margin: 0;
     color: $base-text;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;    
 }
 a{
     color: $base-text;
@@ -154,11 +154,13 @@ input, textarea{
             padding: 44px 0 50px;
         }
         h1{
+            font-family: Futura, Futura-Medium, "Futura Medium", "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", sans-serif;            
+            letter-spacing: 2.3px;
             img{
                 vertical-align: middle;
-                margin: 0 14px;
+                margin: 0 8px 0 15px;
                 position: relative;
-                bottom: 8px;
+                bottom: 11px;
                 @media (max-width: 1024px){
                     width: 84px;
                     margin: 0 6px;
