@@ -74,22 +74,26 @@ input, textarea {
       margin: 0px 11px 0 14px;
       vertical-align: bottom; }
     .main-hero header .header-logo .title {
-      font-size: 50px; }
+      font-size: 50px;
+      font-weight: 300; }
     @media (max-width: 1024px) {
       .main-hero header .header-logo .web-burza-logo img {
         width: 146px; }
       .main-hero header .header-logo .js-logo {
-        margin: 0 7px; }
+        margin: 0 7px;
+        position: relative;
+        top: 6px; }
         .main-hero header .header-logo .js-logo img {
           width: 37px; }
       .main-hero header .header-logo .title {
-        font-size: 38px; } }
+        font-size: 34px; } }
     @media (max-width: 767px) {
       .main-hero header .header-logo .web-burza-logo img {
         width: 106px; }
       .main-hero header .header-logo .js-logo {
         margin: 0 5px;
-        vertical-align: middle; }
+        vertical-align: middle;
+        position: inherit; }
         .main-hero header .header-logo .js-logo img {
           width: 26px; }
       .main-hero header .header-logo .title {
@@ -136,9 +140,14 @@ nav {
     justify-content: space-between; }
     nav ul a {
       font-size: 36px; }
+  @media (max-width: 1024px) {
+    nav ul {
+      padding: 22px; }
+      nav ul a {
+        font-size: 28px; } }
   @media (max-width: 767px) {
     nav ul {
-      padding: 27px 25px; }
+      padding: 26px; }
       nav ul a {
         font-size: 22px; } }
 
