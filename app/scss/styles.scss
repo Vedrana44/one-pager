@@ -13,32 +13,50 @@ a{
     color: $base-text;
     text-decoration: none;
 }
+
+//TYPOGRAPHY & RESET
+
+p{
+    margin: 0 0 10px 0;
+}
 ul{
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-//TYPOGRAPHY & RESET
+//Desktop
 h1{
     font-size: 72px;
     margin: 0;
     font-weight: 400;
-    @media (max-width: 767px){
-        font-size: 62px;
-    }
 }
 h2{
     font-size: 64px;
     margin: 0;
     text-align: center;
-    @media (max-width: 767px){
-        font-size: 52px;
+}
+
+//Tablet
+@media (max-width: 1024px){
+    h1{
+        font-size: 60px;
+    }
+    h2{
+        font-size: 50px;
     }
 }
-p{
-    margin: 0 0 10px 0;
+
+//Mobile
+@media (max-width: 767px) {
+    h1{
+        font-size: 54px;
+    }
+    h2{
+        font-size: 46px;
+    }
 }
+
 
 //BUTTONS
 .button{
@@ -47,13 +65,19 @@ p{
     font-size: 20px;
     font-weight: 600;
     text-transform: uppercase;
-    border: none;
-    padding-top: 17px;
-    padding-bottom: 17px;
+    padding: 17px 0;
     cursor: pointer;
     text-align: center;
     display: block;
     box-shadow: 0px 0px 4px #FFFFFF;
+    &:hover{
+        background-color: darken($button-color, 10%);
+    }
+    //Mobile and tablet
+    @media (max-width: 1024px){
+        padding: 14px 0;
+        font-size: 18px;
+    }
 }
 
 //INPUT & TEXTAREA
@@ -79,17 +103,28 @@ input, textarea{
             .js-logo{
                 margin: 0px 11px 0 14px;
                 vertical-align: bottom;
-                @media (max-width: 767px){
-                    margin-top: 17px;
-                }
             }
             .title{
                 font-size: 50px;
-                font-weight: 200;
             }
-            @media (max-width: 1023px){
-                
+            //For tablets
+            @media (max-width: 1024px){
+                .web-burza-logo{
+                    img{
+                        width: 146px;
+                    }
+                }
+                .js-logo{
+                    margin: 0 7px;
+                    img{
+                        width: 37px;
+                    }
+                }
+                .title{
+                    font-size: 38px;
+                }
             }
+            //For mobile
             @media (max-width: 767px){
                 .web-burza-logo{
                     img{
@@ -120,6 +155,10 @@ input, textarea{
                 margin: 0 14px;
                 position: relative;
                 bottom: 8px;
+                @media (max-width: 1024px){
+                    width: 84px;
+                    margin: 0 6px;
+                }
                 @media (max-width: 767px){
                     width: 70px;
                     margin: 6px auto;
@@ -176,6 +215,7 @@ nav{
     height: 82px;
 }
 
+//DEVELOPERS
 #developers{
     background-image: url("../images/backgrounds/dev-bg.png");
     background-size: cover;
@@ -183,7 +223,7 @@ nav{
     background-position: center 0;
     padding: 25px;
     .dev-content{
-        max-width: 1200px;
+        max-width: 1180px;
         margin: 16px auto 0;
         .dev-list{
             display: flex;
@@ -193,6 +233,7 @@ nav{
             margin-bottom: 20px;
             .developer{
                 width: 50%;
+                max-width: 562px;
                 margin-bottom: 40px;
                 .dev-inner{
                     display: flex;
@@ -211,6 +252,7 @@ nav{
                 }
                 @media (max-width: 767px) {
                     width: 100%;
+                    max-width: initial;
                     .dev-inner{
                         display: block;
                         .dev-data, .dev-img{
@@ -299,9 +341,14 @@ footer{
         margin-top: 15px;
         margin-bottom: 5px;
     }
+    @media (max-width: 1024px) {
+        img{
+            width: 117px;
+        }
+    }
     @media (max-width: 767px) {
         img{
-            width: 100px;
+            width: 87px;
         }
     }
 }
