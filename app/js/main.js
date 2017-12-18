@@ -31,14 +31,14 @@ $(document).ready(function(){
 });
 
 
-//REMOVE ID FROM URL
+//REMOVING ID FROM URL
 
 $(window).on('hashchange', function(e){
     history.replaceState ("", document.title, e.originalEvent.oldURL);
 });
 
 
-//POSTING FORM DATA
+//POSTING FORM DATA WITH AJAX
 
 function submit() {
 
@@ -57,10 +57,12 @@ function submit() {
            email: email,
            message: message
         },
-        success: function (response) 
-        {
-          document.getElementById("feedback").innerHTML = "Thank you, form is submitted successfully.";
+        success: function (response) {
+          document.getElementById("feedback").innerHTML = response;
           document.getElementById("form").reset();
+        },
+        error: function () {
+            document.getElementById("feedback").innerHTML = "Sorry, error has occurred.";
         }
       });
     }
