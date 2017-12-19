@@ -1,17 +1,25 @@
 //STICKY NAVIGATION
 
-window.onscroll = function() {stickyNavigation()};
+$(document).ready(function() {
+    
+    var stickyNavTop = $('#navigation').offset().top;
+        
+    var stickyNavigation = function(){
+        var scrollTop = $(window).scrollTop();    
+        if (scrollTop > stickyNavTop) { 
+            $('#navigation').addClass('sticky');
+        } else {
+            $('#navigation').removeClass('sticky'); 
+        }
+    };
 
-var navigation = document.getElementById('navigation');
-var sticky = navigation.offsetTop;
+    stickyNavigation();
 
-function stickyNavigation() {
-    if (window.pageYOffset >= sticky) {
-        navigation.classList.add("sticky")
-    } else {
-        navigation.classList.remove("sticky");
-    }
-}
+    $(window).scroll(function() {
+        stickyNavigation();
+    });
+
+});
 
 
 //ANIMATED NAVIGATION
